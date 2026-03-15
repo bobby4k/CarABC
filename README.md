@@ -85,6 +85,24 @@ python generate_pdf.py --days 1-20 --force
 - 如果 `output/model_usage_state.json` 不存在，则表示不做额度限制，模型可持续调用。
 - 当额度文件存在时，只有“成功生成图片”才会将对应模型的剩余额度减 `1`；失败不会扣减。
 
+### 兼容其他图片平台
+- 当前图片 provider 已按模块拆分在 `carabc/images/providers.py`。
+- 除了现有阿里百炼 provider，还提供了一个 `OpenAICompatibleImagesProvider` 模板，便于后续接入其他兼容 OpenAI Images API 的平台。
+- 这类平台通常只需要在 `config.yaml` 中新增模型配置，并把 `api_mode` 设为 `openai_images`。
+- 典型配置示例：
+```yaml
+image_models:
+  - name: demo-openai-images
+    provider: custom
+    api_mode: openai_images
+    model_name: gpt-image-1
+    api_key_env: OPENAI_API_KEY
+    base_url: https://api.openai.com/v1
+    size: 1024x1024
+    n: 1
+    timeout_seconds: 180
+```
+
 ### 额度文件示例
 ```json
 {
