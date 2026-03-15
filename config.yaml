@@ -1,20 +1,20 @@
 # 字库阶段配置
 stages:
   - name: 启蒙
-    days: [1, 5]
+    days: [1, 7]
     hanzi_files:
       - hanzi/qimeng.txt
     extra_chars: []
 
   - name: 基础
-    days: [6, 70]
+    days: [7, 60]
     hanzi_files:
       - hanzi/qimeng.txt
       - hanzi/jichu.txt
     extra_chars: []
 
   - name: 拓展
-    days: [71, 100]
+    days: [61, 100]
     hanzi_files:
       - hanzi/qimeng.txt
       - hanzi/jichu.txt
@@ -22,14 +22,36 @@ stages:
     extra_chars: []
 
 # 图片模型配置
-image_model:
-  provider: alibaba
-  model_name: qwen-image-2
-  api_key_env: DASHSCOPE_API_KEY
-  base_url: https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis
-  size: 512*512
-  n: 1
-  timeout_seconds: 60
+image_models:
+  - name: qwen-image-2.0
+    provider: alibaba
+    model_name: qwen-image-2.0
+    api_key_env: DASHSCOPE_API_KEY
+    base_url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
+    api_mode: qwen_multimodal_sync
+    size: 1024*1024
+    n: 1
+    timeout_seconds: 180
+
+  - name: qwen-image-plus
+    provider: alibaba
+    model_name: qwen-image-plus
+    api_key_env: DASHSCOPE_API_KEY
+    base_url: https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis
+    api_mode: dashscope_async_text2image
+    size: 1024*1024
+    n: 1
+    timeout_seconds: 180
+
+  - name: wanx-v1
+    provider: alibaba
+    model_name: wanx-v1
+    api_key_env: DASHSCOPE_API_KEY
+    base_url: https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis
+    api_mode: dashscope_async_text2image
+    size: 1024*1024
+    n: 1
+    timeout_seconds: 180
 
 # 业务规则配置
 rules:
@@ -38,9 +60,13 @@ rules:
   require_unique_themes: true
   brand_names:
     - 多美卡
-    - 拓易
     - Mini GT
     - 风火轮
+    - 火柴盒
+    - 拓意
+    - 闪电乔尼
+    - 绿光
+    - 微影
 
 # 输入输出路径
 paths:
@@ -48,6 +74,7 @@ paths:
   image_dir: cards
   output_dir: output
   log_file: output/generated_log.log
+  model_state_file: output/model_usage_state.json
   pdf_file: output/car_learning.pdf
   font_path: fonts/LXGWNeoXiHei.ttf
 

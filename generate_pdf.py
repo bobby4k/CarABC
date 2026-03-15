@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import argparse
 import base64
+import json
 import os
 import re
+import time
 from dataclasses import dataclass
 from datetime import datetime
 from io import BytesIO
@@ -65,6 +67,10 @@ class ImageResult:
     image_path: str
     image_status: str
     pdf_included: bool
+    model_used: str = ""
+    model_attempts: list[str] | None = None
+    quota_before: str = ""
+    quota_after: str = ""
     error: str = ""
 
 
@@ -225,13 +231,13 @@ def validate_themes(
 
         style = str(item["image_style"])
         if is_rule_or_safety_theme(item):
-            if "简约卡通" not in style:
-                raise ValidationError(f"第 {day} 天属于规则/安全主题，应使用简约卡通风格")
+            if "吉卜力" not in style:
+                raise ValidationError(f"第 {day} 天属于规则/安全主题，应使用吉卜力风格")
         elif theme_type in {"brand", "car_model"}:
             if "写实" not in style and "实车" not in style:
                 raise ValidationError(f"第 {day} 天属于品牌或车型主题，应使用写实风/实车风")
-        elif "简约卡通" not in style:
-            raise ValidationError(f"第 {day} 天的知识主题应使用简约卡通风格")
+        elif "吉卜力" not in style:
+            raise ValidationError(f"第 {day} 天的知识主题应使用吉卜力风格")
 
         combined_text = " ".join(
             [
@@ -272,6 +278,30 @@ def ensure_parent(file_path: Path) -> None:
     file_path.parent.mkdir(parents=True, exist_ok=True)
 
 
+def build_days_suffix(selected_days: list[int]) -> str:
+    if not selected_days:
+        raise ValidationError("未选择任何天数，无法生成 PDF 文件名")
+
+    ranges: list[tuple[int, int]] = []
+    start = selected_days[0]
+    end = selected_days[0]
+    for day in selected_days[1:]:
+        if day == end + 1:
+            end = day
+        else:
+            ranges.append((start, end))
+            start = end = day
+    ranges.append((start, end))
+
+    parts = []
+    for start, end in ranges:
+        if start == end:
+            parts.append(str(start))
+        else:
+            parts.append(f"{start}-{end}")
+    return ",".join(parts)
+
+
 def read_image_bytes_from_response(data: dict[str, Any]) -> bytes:
     output = data.get("output", {})
     results = output.get("results") or []
@@ -296,8 +326,178 @@ def read_image_bytes_from_response(data: dict[str, Any]) -> bytes:
     raise ValidationError(f"无法从图片接口响应中解析图片数据，响应字段: {list(data.keys())}")
 
 
-def request_image(prompt: str, config: dict[str, Any]) -> bytes:
-    image_model = config["image_model"]
+def read_image_bytes_from_qwen_multimodal_response(data: dict[str, Any]) -> bytes:
+    choices = data.get("output", {}).get("choices", [])
+    if not choices:
+        raise ValidationError(f"千问文生图同步接口未返回 choices: {data}")
+
+    message = choices[0].get("message", {})
+    content = message.get("content", [])
+    for item in content:
+        if isinstance(item, dict) and item.get("image"):
+            response = requests.get(item["image"], timeout=120)
+            response.raise_for_status()
+            return response.content
+    raise ValidationError(f"千问文生图同步接口未返回图片地址: {data}")
+
+
+def create_async_task(prompt: str, image_model: dict[str, Any]) -> str:
+    api_key = os.getenv(image_model["api_key_env"])
+    if not api_key:
+        raise ValidationError(
+            f"缺少图片接口 API Key，请设置环境变量 `{image_model['api_key_env']}`"
+        )
+
+    payload = {
+        "model": image_model["model_name"],
+        "input": {"prompt": prompt},
+        "parameters": {
+            "size": image_model.get("size", "1024*1024"),
+            "n": image_model.get("n", 1),
+        },
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "X-DashScope-Async": "enable",
+    }
+    response = requests.post(
+        image_model["base_url"],
+        headers=headers,
+        json=payload,
+        timeout=image_model.get("timeout_seconds", 180),
+    )
+    if not response.ok:
+        detail = response.text.strip().replace("\n", " ")
+        if len(detail) > 300:
+            detail = detail[:300] + "..."
+        raise ValidationError(
+            f"{response.status_code} {response.reason} for {image_model['name']}: {detail}"
+        )
+    task_id = response.json().get("output", {}).get("task_id")
+    if not task_id:
+        raise ValidationError(f"异步图片接口未返回 task_id: {response.text}")
+    return task_id
+
+
+def poll_async_task(task_id: str, image_model: dict[str, Any]) -> dict[str, Any]:
+    api_key = os.getenv(image_model["api_key_env"])
+    if not api_key:
+        raise ValidationError(
+            f"缺少图片接口 API Key，请设置环境变量 `{image_model['api_key_env']}`"
+        )
+
+    task_url = f"https://dashscope.aliyuncs.com/api/v1/tasks/{task_id}"
+    headers = {"Authorization": f"Bearer {api_key}"}
+    timeout_seconds = image_model.get("timeout_seconds", 180)
+    start_time = datetime.now().timestamp()
+    while True:
+        response = requests.get(task_url, headers=headers, timeout=60)
+        if not response.ok:
+            detail = response.text.strip().replace("\n", " ")
+            if len(detail) > 300:
+                detail = detail[:300] + "..."
+            raise ValidationError(
+                f"查询任务失败 {response.status_code} {response.reason} for {image_model['name']}: {detail}"
+            )
+        data = response.json()
+        status = data.get("output", {}).get("task_status")
+        if status == "SUCCEEDED":
+            return data
+        if status in {"FAILED", "CANCELED", "UNKNOWN"}:
+            message = data.get("output", {}).get("message", "")
+            code = data.get("output", {}).get("code", "")
+            raise ValidationError(f"异步任务失败 {image_model['name']}: {code} {message}".strip())
+        if datetime.now().timestamp() - start_time > timeout_seconds:
+            raise ValidationError(f"异步任务等待超时: {image_model['name']} task_id={task_id}")
+        time.sleep(3)
+
+
+def read_image_bytes_from_async_task(data: dict[str, Any]) -> bytes:
+    results = data.get("output", {}).get("results", [])
+    for item in results:
+        if isinstance(item, dict) and item.get("url"):
+            response = requests.get(item["url"], timeout=120)
+            response.raise_for_status()
+            return response.content
+    raise ValidationError(f"异步图片任务未返回图片结果: {data}")
+
+
+def load_model_state(state_file: Path, image_models: list[dict[str, Any]]) -> dict[str, int] | None:
+    if not state_file.exists():
+        return None
+
+    try:
+        data = json.loads(state_file.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValidationError(f"模型额度状态文件不是合法 JSON: {state_file}") from exc
+
+    if not isinstance(data, dict):
+        raise ValidationError(f"模型额度状态文件顶层必须是对象: {state_file}")
+
+    expected_names = [model["name"] for model in image_models]
+    for name in expected_names:
+        if name not in data:
+            raise ValidationError(f"模型额度状态缺少字段: {name}")
+        if not isinstance(data[name], int) or data[name] < 0:
+            raise ValidationError(f"模型额度必须是大于等于 0 的整数: {name}")
+    return {name: data[name] for name in expected_names}
+
+
+def save_model_state(state_file: Path, model_state: dict[str, int] | None) -> None:
+    if model_state is None:
+        return
+    ensure_parent(state_file)
+    state_file.write_text(json.dumps(model_state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def request_image(prompt: str, image_model: dict[str, Any]) -> bytes:
+    api_mode = image_model.get("api_mode", "dashscope_async_text2image")
+    if api_mode == "qwen_multimodal_sync":
+        api_key = os.getenv(image_model["api_key_env"])
+        if not api_key:
+            raise ValidationError(
+                f"缺少图片接口 API Key，请设置环境变量 `{image_model['api_key_env']}`"
+            )
+
+        payload = {
+            "model": image_model["model_name"],
+            "input": {
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [{"text": prompt}],
+                    }
+                ]
+            },
+            "parameters": {
+                "size": image_model.get("size", "1024*1024"),
+            },
+        }
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+        response = requests.post(
+            image_model["base_url"],
+            headers=headers,
+            json=payload,
+            timeout=image_model.get("timeout_seconds", 180),
+        )
+        if not response.ok:
+            detail = response.text.strip().replace("\n", " ")
+            if len(detail) > 300:
+                detail = detail[:300] + "..."
+            raise ValidationError(
+                f"{response.status_code} {response.reason} for {image_model['name']}: {detail}"
+            )
+        return read_image_bytes_from_qwen_multimodal_response(response.json())
+
+    if api_mode == "dashscope_async_text2image":
+        task_id = create_async_task(prompt, image_model)
+        task_result = poll_async_task(task_id, image_model)
+        return read_image_bytes_from_async_task(task_result)
+
     api_key = os.getenv(image_model["api_key_env"])
     if not api_key:
         raise ValidationError(
@@ -322,7 +522,13 @@ def request_image(prompt: str, config: dict[str, Any]) -> bytes:
         json=payload,
         timeout=image_model.get("timeout_seconds", 60),
     )
-    response.raise_for_status()
+    if not response.ok:
+        detail = response.text.strip().replace("\n", " ")
+        if len(detail) > 300:
+            detail = detail[:300] + "..."
+        raise ValidationError(
+            f"{response.status_code} {response.reason} for {image_model['name']}: {detail}"
+        )
     return read_image_bytes_from_response(response.json())
 
 
@@ -332,7 +538,52 @@ def save_image(image_bytes: bytes, image_path: Path) -> None:
         img.convert("RGB").save(image_path, format="JPEG", quality=95)
 
 
-def process_image(item: dict[str, Any], config: dict[str, Any], root: Path, force: bool) -> ImageResult:
+def request_image_with_fallback(
+    prompt: str,
+    config: dict[str, Any],
+    model_state: dict[str, int] | None,
+    state_file: Path,
+) -> tuple[bytes, str, list[str], str, str]:
+    image_models = config.get("image_models", [])
+    if not image_models:
+        raise ValidationError("config.yaml 中未配置 image_models")
+
+    attempts: list[str] = []
+    errors: list[str] = []
+    for image_model in image_models:
+        model_name = image_model["name"]
+        attempts.append(model_name)
+
+        quota_before = "unlimited"
+        quota_after = "unlimited"
+        if model_state is not None:
+            remaining = model_state[model_name]
+            quota_before = str(remaining)
+            if remaining <= 0:
+                errors.append(f"{model_name}: quota exhausted")
+                continue
+
+        try:
+            image_bytes = request_image(prompt, image_model)
+            if model_state is not None:
+                model_state[model_name] -= 1
+                quota_after = str(model_state[model_name])
+                save_model_state(state_file, model_state)
+            return image_bytes, model_name, attempts, quota_before, quota_after
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{model_name}: {exc}")
+
+    raise ValidationError("; ".join(errors) if errors else "所有图片模型均不可用")
+
+
+def process_image(
+    item: dict[str, Any],
+    config: dict[str, Any],
+    root: Path,
+    force: bool,
+    model_state: dict[str, int] | None,
+    state_file: Path,
+) -> ImageResult:
     image_path = root / item["image_path"]
     existed_before = image_path.exists()
     if image_path.exists() and not force:
@@ -343,10 +594,19 @@ def process_image(item: dict[str, Any], config: dict[str, Any], root: Path, forc
             image_path=item["image_path"],
             image_status="skipped_existing",
             pdf_included=True,
+            model_used="",
+            model_attempts=[],
+            quota_before="",
+            quota_after="",
         )
 
     try:
-        image_bytes = request_image(item["image_prompt"], config)
+        image_bytes, model_used, model_attempts, quota_before, quota_after = request_image_with_fallback(
+            item["image_prompt"],
+            config,
+            model_state,
+            state_file,
+        )
         save_image(image_bytes, image_path)
         return ImageResult(
             day=item["day"],
@@ -355,6 +615,10 @@ def process_image(item: dict[str, Any], config: dict[str, Any], root: Path, forc
             image_path=item["image_path"],
             image_status="regenerated" if force and existed_before else "generated",
             pdf_included=True,
+            model_used=model_used,
+            model_attempts=model_attempts,
+            quota_before=quota_before,
+            quota_after=quota_after,
         )
     except Exception as exc:  # noqa: BLE001
         return ImageResult(
@@ -364,6 +628,10 @@ def process_image(item: dict[str, Any], config: dict[str, Any], root: Path, forc
             image_path=item["image_path"],
             image_status="failed",
             pdf_included=config["pdf"].get("allow_missing_image", True),
+            model_used="",
+            model_attempts=[model["name"] for model in config.get("image_models", [])],
+            quota_before="",
+            quota_after="",
             error=str(exc),
         )
 
@@ -377,7 +645,7 @@ def load_existing_log(log_file: Path) -> dict[int, dict[str, Any]]:
         if not line.strip():
             continue
         match = re.search(
-            r"day=(\d+)\s*\|\s*theme=(.*?)\s*\|\s*stage=(.*?)\s*\|\s*image=(.*?)\s*\|\s*status=(.*?)\s*\|\s*pdf=(.*?)\s*\|\s*error=(.*)$",
+            r"day=(\d+)\s*\|\s*theme=(.*?)\s*\|\s*stage=(.*?)\s*\|\s*image=(.*?)\s*\|\s*status=(.*?)\s*\|\s*model=(.*?)\s*\|\s*attempts=(.*?)\s*\|\s*quota_before=(.*?)\s*\|\s*quota_after=(.*?)\s*\|\s*pdf=(.*?)\s*\|\s*error=(.*)$",
             line,
         )
         if not match:
@@ -389,8 +657,12 @@ def load_existing_log(log_file: Path) -> dict[int, dict[str, Any]]:
             "stage": match.group(3),
             "image_path": match.group(4),
             "image_status": match.group(5),
-            "pdf_included": match.group(6) == "yes",
-            "error": match.group(7),
+            "model_used": match.group(6),
+            "model_attempts": match.group(7),
+            "quota_before": match.group(8),
+            "quota_after": match.group(9),
+            "pdf_included": match.group(10) == "yes",
+            "error": match.group(11),
             "generated_at": line.split(" | ", 1)[0],
         }
     return entries
@@ -407,6 +679,10 @@ def write_log(log_file: Path, results: list[ImageResult]) -> None:
             "stage": result.stage,
             "image_path": result.image_path,
             "image_status": result.image_status,
+            "model_used": result.model_used,
+            "model_attempts": ",".join(result.model_attempts or []),
+            "quota_before": result.quota_before,
+            "quota_after": result.quota_after,
             "pdf_included": result.pdf_included,
             "error": result.error,
             "generated_at": timestamp,
@@ -423,6 +699,10 @@ def write_log(log_file: Path, results: list[ImageResult]) -> None:
                     f"stage={item['stage']}",
                     f"image={item['image_path']}",
                     f"status={item['image_status']}",
+                    f"model={item['model_used']}",
+                    f"attempts={item['model_attempts']}",
+                    f"quota_before={item['quota_before']}",
+                    f"quota_after={item['quota_after']}",
                     f"pdf={'yes' if item['pdf_included'] else 'no'}",
                     f"error={item['error']}",
                 ]
@@ -761,8 +1041,10 @@ def draw_cut_guides(pdf: canvas.Canvas, page_width: float, page_height: float, m
     pdf.restoreState()
 
 
-def render_pdf(items: list[dict[str, Any]], config: dict[str, Any], root: Path) -> Path:
-    pdf_file = root / config["paths"]["pdf_file"]
+def render_pdf(items: list[dict[str, Any]], config: dict[str, Any], root: Path, selected_days: list[int]) -> Path:
+    pdf_base_file = root / config["paths"]["pdf_file"]
+    day_suffix = build_days_suffix(selected_days)
+    pdf_file = pdf_base_file.with_name(f"{pdf_base_file.stem}_day{day_suffix}{pdf_base_file.suffix}")
     ensure_parent(pdf_file)
 
     cn_font, en_font = register_fonts(config, root)
@@ -810,15 +1092,17 @@ def main() -> None:
     themes_path = root / config["paths"]["themes_file"]
     themes_data = load_yaml(themes_path)
     items = validate_themes(themes_data, config, selected_days, root)
+    state_file = root / config["paths"]["model_state_file"]
+    model_state = load_model_state(state_file, config.get("image_models", []))
 
     results: list[ImageResult] = []
     for item in items:
-        results.append(process_image(item, config, root, args.force))
+        results.append(process_image(item, config, root, args.force, model_state, state_file))
 
     log_file = root / config["paths"]["log_file"]
     write_log(log_file, results)
 
-    pdf_file = render_pdf(items, config, root)
+    pdf_file = render_pdf(items, config, root, selected_days)
     print_summary(items, results, pdf_file)
 
 

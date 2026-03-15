@@ -213,3 +213,4 @@ __marimo__/
 *.png
 *.pdf
 *_log.json
+model_usage_state.json
