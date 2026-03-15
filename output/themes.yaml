@@ -282,10 +282,10 @@ days:
         pinyin: jiao3 ban4 che1
       - word: 大桶
         pinyin: da4 tong3
-    en_sentence: The mixer truck drum is turning.
+    en_sentence: The big drum is turning.
     en_word_notes:
-      - word: mixer truck
-        note: 搅拌车
+      - word: drum
+        note: 大桶
       - word: turning
         note: 转动
     task: 用手比一比大桶转圈。
@@ -360,18 +360,18 @@ days:
     theme_type: knowledge
     image_style: 吉卜力风格，有一定参考背景
     image_prompt: 一台黄色吊车在工地上吊起重物，儿童插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，工地环境简单清楚，儿童友好，无文字
-    cn_sentence: 吊车把大东西吊起来。
+    cn_sentence: 吊车把大箱子吊起来。
     cn_pinyin_marks:
       - word: 吊车
         pinyin: diao4 che1
       - word: 吊起来
         pinyin: diao4 qi3 lai2
-    en_sentence: The crane lifts a big thing.
+    en_sentence: The crane lifts a big box.
     en_word_notes:
       - word: crane
         note: 吊车
-      - word: lifts
-        note: 吊起
+      - word: box
+        note: 大箱子
     task: 用手做一做吊起来的动作。
     image_path: cards/day018/image.jpg
 
@@ -416,3 +416,1683 @@ days:
         note: 整齐地
     task: 看一看这辆车的车顶是什么颜色。
     image_path: cards/day020/image.jpg
+
+  - day: 21
+    stage: 基础
+    theme: 倒车镜
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车侧面的倒车镜特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车门和道路环境简洁可见，儿童友好，无文字
+    cn_sentence: 倒车镜亮亮的。
+    cn_pinyin_marks:
+      - word: 倒车镜
+        pinyin: dao4 che1 jing4
+      - word: 亮亮
+        pinyin: liang4 liang4
+    en_sentence: The mirror looks shiny.
+    en_word_notes:
+      - word: mirror
+        note: 倒车镜
+      - word: shiny
+        note: 发亮的
+    task: 指一指车身边上的小镜子。
+    image_path: cards/day021/image.jpg
+
+  - day: 22
+    stage: 基础
+    theme: 丰田埃尔法
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黑色丰田埃尔法商务车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黑色埃尔法车真大。
+    cn_pinyin_marks:
+      - word: 黑色
+        pinyin: hei1 se4
+      - word: 真大
+        pinyin: zhen1 da4
+    en_sentence: The black Alphard is big.
+    en_word_notes:
+      - word: black
+        note: 黑色的
+      - word: big
+        note: 大的
+    task: 看一看这辆车有几扇车门。
+    image_path: cards/day022/image.jpg
+
+  - day: 23
+    stage: 基础
+    theme: 加油站
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车停在加油站旁边，儿童插画，吉卜力风格，主体明确，有一定参考背景，加油机和站台环境简洁清楚，儿童友好，无文字
+    cn_sentence: 小汽车在加油站停下。
+    cn_pinyin_marks:
+      - word: 加油站
+        pinyin: jia1 you2 zhan4
+      - word: 停下
+        pinyin: ting2 xia4
+    en_sentence: The car stops at the gas station.
+    en_word_notes:
+      - word: stops
+        note: 停下
+      - word: gas station
+        note: 加油站
+    task: 找一找图里的加油机。
+    image_path: cards/day023/image.jpg
+
+  - day: 24
+    stage: 基础
+    theme: 警车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆警车停在路边，儿童插画，吉卜力风格，主体明确，有一定参考背景，街道和路牌环境清楚，儿童友好，无文字
+    cn_sentence: 警车在路边慢慢开。
+    cn_pinyin_marks:
+      - word: 警车
+        pinyin: jing3 che1
+      - word: 路边
+        pinyin: lu4 bian1
+    en_sentence: The police car is by the road.
+    en_word_notes:
+      - word: police car
+        note: 警车
+      - word: road
+        note: 路边
+    task: 看一看警车车顶的灯。
+    image_path: cards/day024/image.jpg
+
+  - day: 25
+    stage: 基础
+    theme: 日产Skyline GT-R
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆蓝色日产 Skyline GT-R 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 蓝色GT-R跑得很快。
+    cn_pinyin_marks:
+      - word: 蓝色
+        pinyin: lan2 se4
+      - word: 很快
+        pinyin: hen3 kuai4
+    en_sentence: The blue GT-R goes fast.
+    en_word_notes:
+      - word: blue
+        note: 蓝色的
+      - word: fast
+        note: 很快
+    task: 找一找这辆车的前灯。
+    image_path: cards/day025/image.jpg
+
+  - day: 26
+    stage: 基础
+    theme: 车门
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车停在路边，车门打开，儿童插画，吉卜力风格，主体明确，有一定参考背景，车身和地面清楚，儿童友好，无文字
+    cn_sentence: 车门轻轻打开了。
+    cn_pinyin_marks:
+      - word: 车门
+        pinyin: che1 men2
+      - word: 打开
+        pinyin: da3 kai1
+    en_sentence: The car door is open.
+    en_word_notes:
+      - word: door
+        note: 车门
+      - word: open
+        note: 打开的
+    task: 指一指车门把手在哪儿。
+    image_path: cards/day026/image.jpg
+
+  - day: 27
+    stage: 基础
+    theme: 车灯
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车前面的车灯特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车头和道路简洁可见，儿童友好，无文字
+    cn_sentence: 车灯亮亮地照路。
+    cn_pinyin_marks:
+      - word: 车灯
+        pinyin: che1 deng1
+      - word: 照路
+        pinyin: zhao4 lu4
+    en_sentence: The light shines on the road.
+    en_word_notes:
+      - word: light
+        note: 车灯
+      - word: shines
+        note: 照亮
+    task: 找一找车头上的两个灯。
+    image_path: cards/day027/image.jpg
+
+  - day: 28
+    stage: 基础
+    theme: 路虎卫士
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆绿色路虎卫士越野车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 绿色卫士车像大方盒。
+    cn_pinyin_marks:
+      - word: 绿色
+        pinyin: lv4 se4
+      - word: 方盒
+        pinyin: fang1 he2
+    en_sentence: The green Defender looks strong.
+    en_word_notes:
+      - word: green
+        note: 绿色的
+      - word: strong
+        note: 结实的
+    task: 看一看这辆车高不高。
+    image_path: cards/day028/image.jpg
+
+  - day: 29
+    stage: 基础
+    theme: 洗车店
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车在洗车店里冲水，儿童插画，吉卜力风格，主体明确，有一定参考背景，水花和店面环境简单清楚，儿童友好，无文字
+    cn_sentence: 小汽车在洗车店洗澡。
+    cn_pinyin_marks:
+      - word: 洗车店
+        pinyin: xi3 che1 dian4
+      - word: 洗澡
+        pinyin: xi3 zao3
+    en_sentence: The car is washed here.
+    en_word_notes:
+      - word: washed
+        note: 被清洗
+      - word: here
+        note: 在这里
+    task: 找一找图里的水花。
+    image_path: cards/day029/image.jpg
+
+  - day: 30
+    stage: 基础
+    theme: 多美卡
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 多美卡经典玩具小汽车整齐摆放展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 多美卡的小车排成一行。
+    cn_pinyin_marks:
+      - word: 多美卡
+        pinyin: duo1 mei3 ka3
+      - word: 一行
+        pinyin: yi1 hang2
+    en_sentence: Tomica cars are in a line.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: line
+        note: 一排
+    task: 数一数图里有几辆小车。
+    image_path: cards/day030/image.jpg
+
+  - day: 31
+    stage: 基础
+    theme: 垃圾车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆垃圾车停在路边收垃圾，儿童插画，吉卜力风格，主体明确，有一定参考背景，街道和垃圾桶环境简洁清楚，儿童友好，无文字
+    cn_sentence: 垃圾车来收大桶了。
+    cn_pinyin_marks:
+      - word: 垃圾车
+        pinyin: la1 ji1 che1
+      - word: 大桶
+        pinyin: da4 tong3
+    en_sentence: The garbage truck takes the bins.
+    en_word_notes:
+      - word: garbage truck
+        note: 垃圾车
+      - word: bins
+        note: 垃圾桶
+    task: 找一找图里的大桶。
+    image_path: cards/day031/image.jpg
+
+  - day: 32
+    stage: 基础
+    theme: 福特Mustang
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆红色福特 Mustang 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 红色Mustang很神气。
+    cn_pinyin_marks:
+      - word: 红色
+        pinyin: hong2 se4
+      - word: 神气
+        pinyin: shen2 qi4
+    en_sentence: The red Mustang looks great.
+    en_word_notes:
+      - word: red
+        note: 红色的
+      - word: great
+        note: 很棒
+    task: 说一说这辆车像不像跑车。
+    image_path: cards/day032/image.jpg
+
+  - day: 33
+    stage: 基础
+    theme: 轮胎店
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一家轮胎店门口摆着很多轮胎，旁边有一辆小汽车，儿童插画，吉卜力风格，主体明确，有一定参考背景，店面环境清楚，儿童友好，无文字
+    cn_sentence: 轮胎店门口有很多轮胎。
+    cn_pinyin_marks:
+      - word: 轮胎店
+        pinyin: lun2 tai1 dian4
+      - word: 很多
+        pinyin: hen3 duo1
+    en_sentence: There are many tires at the shop.
+    en_word_notes:
+      - word: many
+        note: 很多
+      - word: tires
+        note: 轮胎
+    task: 数一数图里有几个轮胎。
+    image_path: cards/day033/image.jpg
+
+  - day: 34
+    stage: 基础
+    theme: 拖车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆黄色拖车拖着一辆小汽车前进，儿童插画，吉卜力风格，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 拖车把小车拖走了。
+    cn_pinyin_marks:
+      - word: 拖车
+        pinyin: tuo1 che1
+      - word: 拖走
+        pinyin: tuo1 zou3
+    en_sentence: The tow truck pulls the car away.
+    en_word_notes:
+      - word: tow truck
+        note: 拖车
+      - word: pulls
+        note: 拉走
+    task: 看一看哪辆车在后面。
+    image_path: cards/day034/image.jpg
+
+  - day: 35
+    stage: 基础
+    theme: 风火轮
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 风火轮经典玩具跑车模型陈列展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 风火轮的小车很亮眼。
+    cn_pinyin_marks:
+      - word: 风火轮
+        pinyin: feng1 huo3 lun2
+      - word: 亮眼
+        pinyin: liang4 yan3
+    en_sentence: Hot Wheels cars look bright.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: bright
+        note: 亮眼的
+    task: 找一找你最喜欢的一辆小车。
+    image_path: cards/day035/image.jpg
+
+  - day: 36
+    stage: 基础
+    theme: 兰博基尼Countach
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黄色兰博基尼 Countach 超跑，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黄色Countach真像飞船。
+    cn_pinyin_marks:
+      - word: 黄色
+        pinyin: huang2 se4
+      - word: 飞船
+        pinyin: fei1 chuan2
+    en_sentence: The yellow Countach looks like a rocket.
+    en_word_notes:
+      - word: yellow
+        note: 黄色的
+      - word: rocket
+        note: 火箭
+    task: 看一看这辆车低不低。
+    image_path: cards/day036/image.jpg
+
+  - day: 37
+    stage: 基础
+    theme: 倒车入库
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车慢慢倒车进入车位，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，停车线和车位环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车慢慢倒进车位。
+    cn_pinyin_marks:
+      - word: 倒进
+        pinyin: dao4 jin4
+      - word: 车位
+        pinyin: che1 wei4
+    en_sentence: The car backs into the parking space.
+    en_word_notes:
+      - word: backs
+        note: 倒车
+      - word: parking space
+        note: 车位
+    task: 用手比一比小车慢慢后退。
+    image_path: cards/day037/image.jpg
+
+  - day: 38
+    stage: 基础
+    theme: 让行标志
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一个清楚的让行标志立在路口旁边，旁边有一辆慢下来的小汽车，儿童启蒙插画，吉卜力风格，主体明确，有一定参考背景，道路环境简单明了，儿童友好，无文字
+    cn_sentence: 看到让行牌要慢一点。
+    cn_pinyin_marks:
+      - word: 让行牌
+        pinyin: rang4 xing2 pai2
+      - word: 慢一点
+        pinyin: man4 yi4 dian3
+    en_sentence: Slow down at the yield sign.
+    en_word_notes:
+      - word: slow down
+        note: 慢下来
+      - word: yield sign
+        note: 让行标志
+    task: 说一说看到这个牌子要做什么。
+    image_path: cards/day038/image.jpg
+
+  - day: 39
+    stage: 基础
+    theme: 本田NSX
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆红色本田 NSX 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 红色NSX跑车真帅。
+    cn_pinyin_marks:
+      - word: 红色
+        pinyin: hong2 se4
+      - word: 真帅
+        pinyin: zhen1 shuai4
+    en_sentence: The red NSX looks great.
+    en_word_notes:
+      - word: red
+        note: 红色的
+      - word: great
+        note: 很棒
+    task: 找一找这辆车的车轮。
+    image_path: cards/day039/image.jpg
+
+  - day: 40
+    stage: 基础
+    theme: 车牌
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车车尾的车牌特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车尾和道路环境简洁可见，儿童友好，无文字
+    cn_sentence: 车牌挂在车尾上。
+    cn_pinyin_marks:
+      - word: 车牌
+        pinyin: che1 pai2
+      - word: 车尾
+        pinyin: che1 wei3
+    en_sentence: The plate is on the car.
+    en_word_notes:
+      - word: plate
+        note: 车牌
+      - word: car
+        note: 汽车
+    task: 指一指车尾的位置。
+    image_path: cards/day040/image.jpg
+
+  - day: 41
+    stage: 基础
+    theme: 拓意
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 拓意经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 拓意的小车排得很整齐。
+    cn_pinyin_marks:
+      - word: 拓意
+        pinyin: tuo4 yi4
+      - word: 整齐
+        pinyin: zheng3 qi2
+    en_sentence: Tarmac cars are lined up neatly.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: neatly
+        note: 整齐地
+    task: 看一看哪辆车在中间。
+    image_path: cards/day041/image.jpg
+
+  - day: 42
+    stage: 基础
+    theme: 装载机
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一台黄色装载机在工地上推土，儿童插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，工地环境简单清楚，儿童友好，无文字
+    cn_sentence: 装载机把土推成小山。
+    cn_pinyin_marks:
+      - word: 装载机
+        pinyin: zhuang1 zai3 ji1
+      - word: 小山
+        pinyin: xiao3 shan1
+    en_sentence: The loader pushes the dirt.
+    en_word_notes:
+      - word: loader
+        note: 装载机
+      - word: pushes
+        note: 推动
+    task: 用手比一比往前推的动作。
+    image_path: cards/day042/image.jpg
+
+  - day: 43
+    stage: 基础
+    theme: 宝马M3
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆蓝色宝马 M3 轿车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 蓝色M3车停得真好。
+    cn_pinyin_marks:
+      - word: 蓝色
+        pinyin: lan2 se4
+      - word: 真稳
+        pinyin: zhen1 wen3
+    en_sentence: The blue M3 stops here.
+    en_word_notes:
+      - word: blue
+        note: 蓝色的
+      - word: stops
+        note: 停下
+    task: 看一看这辆车的前轮。
+    image_path: cards/day043/image.jpg
+
+  - day: 44
+    stage: 基础
+    theme: 过马路
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一个小朋友在斑马线前准备过马路，旁边有停下来的小汽车，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，道路环境简单明了，儿童友好，无文字
+    cn_sentence: 过马路前要先看灯。
+    cn_pinyin_marks:
+      - word: 过马路
+        pinyin: guo4 ma3 lu4
+      - word: 看灯
+        pinyin: kan4 deng1
+    en_sentence: Look at the light before crossing.
+    en_word_notes:
+      - word: light
+        note: 红绿灯
+      - word: crossing
+        note: 过马路
+    task: 说一说过路前要先做什么。
+    image_path: cards/day044/image.jpg
+
+  - day: 45
+    stage: 基础
+    theme: 火柴盒
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 火柴盒经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 火柴盒的小车真小巧。
+    cn_pinyin_marks:
+      - word: 火柴盒
+        pinyin: huo3 chai2 he2
+      - word: 小巧
+        pinyin: xiao3 qiao3
+    en_sentence: Matchbox cars look small.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: small
+        note: 小小的
+    task: 找一找你最喜欢的一辆。
+    image_path: cards/day045/image.jpg
+
+  - day: 46
+    stage: 基础
+    theme: 雨刷器
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车前挡风玻璃上的雨刷器特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车头环境简洁可见，儿童友好，无文字
+    cn_sentence: 雨刷器在玻璃上摆动。
+    cn_pinyin_marks:
+      - word: 雨刷器
+        pinyin: yu3 shua1 qi4
+      - word: 摆动
+        pinyin: bai3 dong4
+    en_sentence: The wiper moves on the glass.
+    en_word_notes:
+      - word: wiper
+        note: 雨刷器
+      - word: glass
+        note: 玻璃
+    task: 用手比一比左右摆动。
+    image_path: cards/day046/image.jpg
+
+  - day: 47
+    stage: 基础
+    theme: 奔驰G级
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黑色奔驰 G级 越野车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黑色G级车像大盒子。
+    cn_pinyin_marks:
+      - word: 黑色
+        pinyin: hei1 se4
+      - word: 盒子
+        pinyin: he2 zi5
+    en_sentence: The black G-Class looks strong.
+    en_word_notes:
+      - word: black
+        note: 黑色的
+      - word: strong
+        note: 强壮的
+    task: 看一看这辆车高不高。
+    image_path: cards/day047/image.jpg
+
+  - day: 48
+    stage: 基础
+    theme: 修车店
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车在修车店里检查车轮，儿童插画，吉卜力风格，主体明确，有一定参考背景，修车工具和店面环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车在修车店检查。
+    cn_pinyin_marks:
+      - word: 修车店
+        pinyin: xiu1 che1 dian4
+      - word: 检查
+        pinyin: jian3 cha2
+    en_sentence: The car is checked here.
+    en_word_notes:
+      - word: checked
+        note: 检查
+      - word: here
+        note: 在这里
+    task: 找一找图里的工具。
+    image_path: cards/day048/image.jpg
+
+  - day: 49
+    stage: 基础
+    theme: Mini GT
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: Mini GT 经典玩具跑车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: Mini GT的小车很精致。
+    cn_pinyin_marks:
+      - word: 精致
+        pinyin: jing1 zhi4
+      - word: 小车
+        pinyin: xiao3 che1
+    en_sentence: Mini GT cars look nice.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: nice
+        note: 好看的
+    task: 看一看哪辆车最亮。
+    image_path: cards/day049/image.jpg
+
+  - day: 50
+    stage: 基础
+    theme: 大货车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆大货车在公路上稳稳前进，儿童插画，吉卜力风格，主体明确，有一定参考背景，公路和远处景物简单清楚，儿童友好，无文字
+    cn_sentence: 大货车拉着很多箱子。
+    cn_pinyin_marks:
+      - word: 大货车
+        pinyin: da4 huo4 che1
+      - word: 箱子
+        pinyin: xiang1 zi5
+    en_sentence: The truck carries many boxes.
+    en_word_notes:
+      - word: truck
+        note: 大货车
+      - word: boxes
+        note: 箱子
+    task: 数一数图里有几个箱子。
+    image_path: cards/day050/image.jpg
+
+  - day: 51
+    stage: 基础
+    theme: 后备箱
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车的后备箱打开，里面放着几个小箱子，儿童插画，吉卜力风格，主体明确，有一定参考背景，车尾环境清楚，儿童友好，无文字
+    cn_sentence: 后备箱里放着小箱子。
+    cn_pinyin_marks:
+      - word: 后备箱
+        pinyin: hou4 bei4 xiang1
+      - word: 小箱子
+        pinyin: xiao3 xiang1 zi5
+    en_sentence: Small boxes are in the trunk.
+    en_word_notes:
+      - word: boxes
+        note: 小箱子
+      - word: trunk
+        note: 后备箱
+    task: 看一看后面放了几个箱子。
+    image_path: cards/day051/image.jpg
+
+  - day: 52
+    stage: 基础
+    theme: 面包车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆白色面包车停在路边，儿童插画，吉卜力风格，主体明确，有一定参考背景，道路和树木简洁可见，儿童友好，无文字
+    cn_sentence: 白色面包车停在门口。
+    cn_pinyin_marks:
+      - word: 面包车
+        pinyin: mian4 bao1 che1
+      - word: 门口
+        pinyin: men2 kou3
+    en_sentence: The white van stops at the door.
+    en_word_notes:
+      - word: white
+        note: 白色的
+      - word: van
+        note: 面包车
+    task: 指一指这辆车长长的车身。
+    image_path: cards/day052/image.jpg
+
+  - day: 53
+    stage: 基础
+    theme: 绿光
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 绿光经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 绿光的小车摆得很整齐。
+    cn_pinyin_marks:
+      - word: 绿光
+        pinyin: lv4 guang1
+      - word: 整齐
+        pinyin: zheng3 qi2
+    en_sentence: GreenLight cars are neat.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: neat
+        note: 整齐的
+    task: 找一找你最喜欢的一辆。
+    image_path: cards/day053/image.jpg
+
+  - day: 54
+    stage: 基础
+    theme: 推土机
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一台推土机在工地上推土前进，儿童插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，工地环境简单清楚，儿童友好，无文字
+    cn_sentence: 推土机把土推向前。
+    cn_pinyin_marks:
+      - word: 推土机
+        pinyin: tui1 tu3 ji1
+      - word: 向前
+        pinyin: xiang4 qian2
+    en_sentence: The bulldozer pushes the dirt.
+    en_word_notes:
+      - word: bulldozer
+        note: 推土机
+      - word: pushes
+        note: 推动
+    task: 用手做一做向前推的动作。
+    image_path: cards/day054/image.jpg
+
+  - day: 55
+    stage: 基础
+    theme: 本田思域
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆蓝色本田思域轿车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 蓝色思域车真精神。
+    cn_pinyin_marks:
+      - word: 蓝色
+        pinyin: lan2 se4
+      - word: 精神
+        pinyin: jing1 shen2
+    en_sentence: The blue Civic looks smart.
+    en_word_notes:
+      - word: blue
+        note: 蓝色的
+      - word: smart
+        note: 精神的
+    task: 看一看这辆车的前脸。
+    image_path: cards/day055/image.jpg
+
+  - day: 56
+    stage: 基础
+    theme: 地库
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 几辆小汽车停在地下车库里，儿童插画，吉卜力风格，主体明确，有一定参考背景，车位线和灯光环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车停在地库里。
+    cn_pinyin_marks:
+      - word: 地库
+        pinyin: di4 ku4
+      - word: 小汽车
+        pinyin: xiao3 qi4 che1
+    en_sentence: The cars are in the garage.
+    en_word_notes:
+      - word: cars
+        note: 小汽车们
+      - word: garage
+        note: 车库
+    task: 找一找哪辆车最靠前。
+    image_path: cards/day056/image.jpg
+
+  - day: 57
+    stage: 基础
+    theme: 泥头车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆泥头车在工地边慢慢开过，儿童插画，吉卜力风格，主体明确，有一定参考背景，路面和土堆清楚，儿童友好，无文字
+    cn_sentence: 泥头车装着很多土。
+    cn_pinyin_marks:
+      - word: 泥头车
+        pinyin: ni2 tou2 che1
+      - word: 很多
+        pinyin: hen3 duo1
+    en_sentence: The dump truck carries dirt.
+    en_word_notes:
+      - word: dump truck
+        note: 泥头车
+      - word: dirt
+        note: 土
+    task: 看一看车斗里装了什么。
+    image_path: cards/day057/image.jpg
+
+  - day: 58
+    stage: 基础
+    theme: 奥迪R8
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆白色奥迪 R8 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 白色R8跑车真快。
+    cn_pinyin_marks:
+      - word: 白色
+        pinyin: bai2 se4
+      - word: 真快
+        pinyin: zhen1 kuai4
+    en_sentence: The white R8 looks fast.
+    en_word_notes:
+      - word: white
+        note: 白色的
+      - word: fast
+        note: 很快
+    task: 找一找这辆车的两个车门。
+    image_path: cards/day058/image.jpg
+
+  - day: 59
+    stage: 基础
+    theme: 洒水车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆洒水车在路上洒水，儿童插画，吉卜力风格，主体明确，有一定参考背景，路面和水花清楚，儿童友好，无文字
+    cn_sentence: 洒水车在路上洒水。
+    cn_pinyin_marks:
+      - word: 洒水车
+        pinyin: sa3 shui3 che1
+      - word: 洒水
+        pinyin: sa3 shui3
+    en_sentence: The water truck sprays water.
+    en_word_notes:
+      - word: truck
+        note: 车
+      - word: water
+        note: 水
+    task: 找一找图里的水花。
+    image_path: cards/day059/image.jpg
+
+  - day: 60
+    stage: 基础
+    theme: 闪电乔尼
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 闪电乔尼经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 闪电乔尼的小车很亮。
+    cn_pinyin_marks:
+      - word: 闪电乔尼
+        pinyin: shan3 dian4 qiao2 ni2
+      - word: 很亮
+        pinyin: hen3 liang4
+    en_sentence: Johnny cars look bright.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: bright
+        note: 明亮的
+    task: 找一找最亮的一辆小车。
+    image_path: cards/day060/image.jpg
+
+  - day: 61
+    stage: 拓展
+    theme: 车窗
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车侧面的车窗特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车门和天空倒影简洁可见，儿童友好，无文字
+    cn_sentence: 车窗像一面亮镜子。
+    cn_pinyin_marks:
+      - word: 车窗
+        pinyin: che1 chuang1
+      - word: 镜子
+        pinyin: jing4 zi5
+    en_sentence: The window is like a mirror.
+    en_word_notes:
+      - word: window
+        note: 车窗
+      - word: mirror
+        note: 镜子
+    task: 指一指车身上的车窗。
+    image_path: cards/day061/image.jpg
+
+  - day: 62
+    stage: 拓展
+    theme: 雪佛兰科尔维特
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黄色雪佛兰科尔维特跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黄色科尔维特真耀眼。
+    cn_pinyin_marks:
+      - word: 黄色
+        pinyin: huang2 se4
+      - word: 耀眼
+        pinyin: yao4 yan3
+    en_sentence: The yellow Corvette looks bright.
+    en_word_notes:
+      - word: yellow
+        note: 黄色的
+      - word: bright
+        note: 耀眼的
+    task: 看一看这辆车低不低。
+    image_path: cards/day062/image.jpg
+
+  - day: 63
+    stage: 拓展
+    theme: 拓易
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 拓易经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 拓易的小车摆得真整齐。
+    cn_pinyin_marks:
+      - word: 拓易
+        pinyin: tuo4 yi4
+      - word: 整齐
+        pinyin: zheng3 qi2
+    en_sentence: Toyeasy cars are neat.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: neat
+        note: 整齐的
+    task: 数一数图里有几辆小车。
+    image_path: cards/day063/image.jpg
+
+  - day: 64
+    stage: 拓展
+    theme: 吊臂车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆吊臂车在工地上伸出长长的吊臂，儿童插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，工地环境简单清楚，儿童友好，无文字
+    cn_sentence: 吊臂车伸出长长的手臂。
+    cn_pinyin_marks:
+      - word: 吊臂车
+        pinyin: diao4 bi4 che1
+      - word: 手臂
+        pinyin: shou3 bi4
+    en_sentence: The crane truck has a long arm.
+    en_word_notes:
+      - word: crane truck
+        note: 吊臂车
+      - word: arm
+        note: 手臂
+    task: 指一指长长的吊臂。
+    image_path: cards/day064/image.jpg
+
+  - day: 65
+    stage: 拓展
+    theme: 车顶行李箱
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆旅行小汽车车顶装着行李箱，儿童插画，吉卜力风格，主体明确，有一定参考背景，公路和远景清楚，儿童友好，无文字
+    cn_sentence: 车顶行李箱装得满满的。
+    cn_pinyin_marks:
+      - word: 行李箱
+        pinyin: xing2 li3 xiang1
+      - word: 满满
+        pinyin: man3 man3
+    en_sentence: The roof box is full.
+    en_word_notes:
+      - word: roof box
+        note: 车顶行李箱
+      - word: full
+        note: 满满的
+    task: 看一看车顶上放了什么。
+    image_path: cards/day065/image.jpg
+
+  - day: 66
+    stage: 拓展
+    theme: 丰田Supra
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆橙色丰田 Supra 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 橙色Supra车真醒目。
+    cn_pinyin_marks:
+      - word: 橙色
+        pinyin: cheng2 se4
+      - word: 醒目
+        pinyin: xing3 mu4
+    en_sentence: The orange Supra looks bold.
+    en_word_notes:
+      - word: orange
+        note: 橙色的
+      - word: bold
+        note: 很醒目的
+    task: 找一找这辆车的前灯。
+    image_path: cards/day066/image.jpg
+
+  - day: 67
+    stage: 拓展
+    theme: 环岛
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一个环岛路口和绕行的小汽车，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车绕着环岛慢慢开。
+    cn_pinyin_marks:
+      - word: 环岛
+        pinyin: huan2 dao3
+      - word: 慢慢
+        pinyin: man4 man4
+    en_sentence: The car goes around the roundabout.
+    en_word_notes:
+      - word: around
+        note: 绕着
+      - word: roundabout
+        note: 环岛
+    task: 用手比一比绕圈的路线。
+    image_path: cards/day067/image.jpg
+
+  - day: 68
+    stage: 拓展
+    theme: 玛莎拉蒂MC20
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆蓝色玛莎拉蒂 MC20 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 蓝色MC20跑车真亮眼。
+    cn_pinyin_marks:
+      - word: 蓝色
+        pinyin: lan2 se4
+      - word: 亮眼
+        pinyin: liang4 yan3
+    en_sentence: The blue MC20 looks sharp.
+    en_word_notes:
+      - word: blue
+        note: 蓝色的
+      - word: sharp
+        note: 很亮眼
+    task: 看一看这辆车低不低。
+    image_path: cards/day068/image.jpg
+
+  - day: 69
+    stage: 拓展
+    theme: 收费站
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车开到收费站前，儿童插画，吉卜力风格，主体明确，有一定参考背景，收费亭和道路环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车开到收费站前。
+    cn_pinyin_marks:
+      - word: 收费站
+        pinyin: shou1 fei4 zhan4
+      - word: 站前
+        pinyin: zhan4 qian2
+    en_sentence: The car is at the toll gate.
+    en_word_notes:
+      - word: toll gate
+        note: 收费站
+      - word: car
+        note: 小汽车
+    task: 找一找图里的小亭子。
+    image_path: cards/day069/image.jpg
+
+  - day: 70
+    stage: 拓展
+    theme: 微影
+    theme_type: brand
+    image_style: 写实风，背景简洁
+    image_prompt: 微影经典玩具车模型整齐展示，优先选择已经出品的热门玩具车模型，写实风，主体明确，背景简洁，产品展示感清楚，儿童友好，无文字
+    cn_sentence: 微影的小车做得很细。
+    cn_pinyin_marks:
+      - word: 微影
+        pinyin: wei1 ying3
+      - word: 很细
+        pinyin: hen3 xi4
+    en_sentence: MotorHelix cars look detailed.
+    en_word_notes:
+      - word: cars
+        note: 小车
+      - word: detailed
+        note: 细致的
+    task: 看一看哪辆车最像真车。
+    image_path: cards/day070/image.jpg
+
+  - day: 71
+    stage: 拓展
+    theme: 法拉利F40
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆红色法拉利 F40 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 红色F40跑车像火一样。
+    cn_pinyin_marks:
+      - word: 红色
+        pinyin: hong2 se4
+      - word: 一样
+        pinyin: yi2 yang4
+    en_sentence: The red F40 looks like fire.
+    en_word_notes:
+      - word: red
+        note: 红色的
+      - word: fire
+        note: 火
+    task: 找一找车尾的大尾翼。
+    image_path: cards/day071/image.jpg
+
+  - day: 72
+    stage: 拓展
+    theme: 交通锥
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 几个交通锥摆在施工路边，旁边有一辆慢下来的小汽车，儿童插画，吉卜力风格，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 看到交通锥要慢慢开。
+    cn_pinyin_marks:
+      - word: 交通锥
+        pinyin: jiao1 tong1 zhui1
+      - word: 慢慢
+        pinyin: man4 man4
+    en_sentence: Slow down near the cones.
+    en_word_notes:
+      - word: slow down
+        note: 慢下来
+      - word: cones
+        note: 交通锥
+    task: 数一数图里有几个交通锥。
+    image_path: cards/day072/image.jpg
+
+  - day: 73
+    stage: 拓展
+    theme: 车库门
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车停在车库门前，车库门半开，儿童插画，吉卜力风格，主体明确，有一定参考背景，房子和门口环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车停在车库门前。
+    cn_pinyin_marks:
+      - word: 车库门
+        pinyin: che1 ku4 men2
+      - word: 门前
+        pinyin: men2 qian2
+    en_sentence: The car stops by the garage door.
+    en_word_notes:
+      - word: garage door
+        note: 车库门
+      - word: stops
+        note: 停下
+    task: 指一指半开的门。
+    image_path: cards/day073/image.jpg
+
+  - day: 74
+    stage: 拓展
+    theme: 布加迪Chiron
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆蓝黑配色的布加迪 Chiron 超跑，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 蓝黑Chiron车真像闪电。
+    cn_pinyin_marks:
+      - word: 蓝黑
+        pinyin: lan2 hei1
+      - word: 闪电
+        pinyin: shan3 dian4
+    en_sentence: The Chiron looks like lightning.
+    en_word_notes:
+      - word: looks like
+        note: 像
+      - word: lightning
+        note: 闪电
+    task: 看一看这辆车的弯弯线条。
+    image_path: cards/day074/image.jpg
+
+  - day: 75
+    stage: 拓展
+    theme: 隧道口
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车开到隧道口前，儿童插画，吉卜力风格，主体明确，有一定参考背景，山路和隧道环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车开到隧道口了。
+    cn_pinyin_marks:
+      - word: 隧道口
+        pinyin: sui4 dao4 kou3
+      - word: 开到
+        pinyin: kai1 dao4
+    en_sentence: The car is at the tunnel.
+    en_word_notes:
+      - word: car
+        note: 小汽车
+      - word: tunnel
+        note: 隧道
+    task: 找一找黑黑的洞口。
+    image_path: cards/day075/image.jpg
+
+  - day: 76
+    stage: 拓展
+    theme: 林肯领航员
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黑色林肯领航员大型SUV，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黑色领航员车真宽大。
+    cn_pinyin_marks:
+      - word: 领航员车
+        pinyin: ling3 hang2 yuan2 che1
+      - word: 宽大
+        pinyin: kuan1 da4
+    en_sentence: The Navigator looks large.
+    en_word_notes:
+      - word: large
+        note: 很大的
+      - word: Navigator
+        note: 领航员
+    task: 看一看这辆车宽不宽。
+    image_path: cards/day076/image.jpg
+
+  - day: 77
+    stage: 拓展
+    theme: 限速牌
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一个限速牌立在路边，旁边有一辆慢下来的小汽车，儿童启蒙插画，吉卜力风格，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 看到限速牌要慢下来。
+    cn_pinyin_marks:
+      - word: 限速牌
+        pinyin: xian4 su4 pai2
+      - word: 慢下来
+        pinyin: man4 xia4 lai2
+    en_sentence: Slow down at the speed sign.
+    en_word_notes:
+      - word: slow down
+        note: 慢下来
+      - word: speed sign
+        note: 限速牌
+    task: 说一说为什么要慢下来。
+    image_path: cards/day077/image.jpg
+
+  - day: 78
+    stage: 拓展
+    theme: 法拉利Testarossa
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆红色法拉利 Testarossa 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 红色Testarossa真神气。
+    cn_pinyin_marks:
+      - word: 红色
+        pinyin: hong2 se4
+      - word: 神气
+        pinyin: shen2 qi4
+    en_sentence: The red Testarossa looks cool.
+    en_word_notes:
+      - word: red
+        note: 红色的
+      - word: cool
+        note: 神气的
+    task: 看一看车身侧面的线条。
+    image_path: cards/day078/image.jpg
+
+  - day: 79
+    stage: 拓展
+    theme: 山路弯道
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车在山路弯道上慢慢转弯，儿童插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，山路和护栏环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车在弯道上转弯。
+    cn_pinyin_marks:
+      - word: 弯道
+        pinyin: wan1 dao4
+      - word: 转弯
+        pinyin: zhuan3 wan1
+    en_sentence: The car turns on the curve.
+    en_word_notes:
+      - word: turns
+        note: 转弯
+      - word: curve
+        note: 弯道
+    task: 用手比一比弯弯的路。
+    image_path: cards/day079/image.jpg
+
+  - day: 80
+    stage: 拓展
+    theme: 奥斯汀Mini
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆红白配色的经典奥斯汀 Mini 小车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 小小Mini车真可爱。
+    cn_pinyin_marks:
+      - word: 小小
+        pinyin: xiao3 xiao3
+      - word: 可爱
+        pinyin: ke3 ai4
+    en_sentence: The little Mini looks cute.
+    en_word_notes:
+      - word: little
+        note: 小小的
+      - word: cute
+        note: 可爱的
+    task: 看一看这辆车是不是很小。
+    image_path: cards/day080/image.jpg
+
+  - day: 81
+    stage: 拓展
+    theme: 绿灯通行
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 路口绿灯亮起，一辆小汽车向前通行，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，路口环境清楚，儿童友好，无文字
+    cn_sentence: 绿灯亮了，车向前开。
+    cn_pinyin_marks:
+      - word: 绿灯
+        pinyin: lv4 deng1
+      - word: 向前
+        pinyin: xiang4 qian2
+    en_sentence: The car goes on green.
+    en_word_notes:
+      - word: goes
+        note: 往前开
+      - word: green
+        note: 绿灯
+    task: 说一说绿灯亮了可以做什么。
+    image_path: cards/day081/image.jpg
+
+  - day: 82
+    stage: 拓展
+    theme: 三菱帕杰罗
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆银色三菱帕杰罗越野车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 银色帕杰罗车真结实。
+    cn_pinyin_marks:
+      - word: 银色
+        pinyin: yin2 se4
+      - word: 结实
+        pinyin: jie1 shi5
+    en_sentence: The Pajero looks strong.
+    en_word_notes:
+      - word: strong
+        note: 结实的
+      - word: Pajero
+        note: 帕杰罗
+    task: 看一看这辆车高高的轮胎。
+    image_path: cards/day082/image.jpg
+
+  - day: 83
+    stage: 拓展
+    theme: 车库坡道
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车正从车库坡道慢慢开上来，儿童插画，吉卜力风格，主体明确，有一定参考背景，坡道和地库环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车慢慢开上坡道。
+    cn_pinyin_marks:
+      - word: 坡道
+        pinyin: po1 dao4
+      - word: 慢慢
+        pinyin: man4 man4
+    en_sentence: The car goes up the ramp.
+    en_word_notes:
+      - word: goes up
+        note: 开上去
+      - word: ramp
+        note: 坡道
+    task: 用手比一比上坡的动作。
+    image_path: cards/day083/image.jpg
+
+  - day: 84
+    stage: 拓展
+    theme: 丰田兰德酷路泽
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆白色丰田兰德酷路泽越野车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 白色酷路泽车真高大。
+    cn_pinyin_marks:
+      - word: 白色
+        pinyin: bai2 se4
+      - word: 高大
+        pinyin: gao1 da4
+    en_sentence: The Land Cruiser looks big.
+    en_word_notes:
+      - word: big
+        note: 高大的
+      - word: Cruiser
+        note: 酷路泽
+    task: 看一看这辆车是不是很高。
+    image_path: cards/day084/image.jpg
+
+  - day: 85
+    stage: 拓展
+    theme: 右转灯
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆准备右转的小汽车亮起转向灯，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 右转前要先打灯。
+    cn_pinyin_marks:
+      - word: 右转
+        pinyin: you4 zhuan3
+      - word: 打灯
+        pinyin: da3 deng1
+    en_sentence: Turn on the signal before turning.
+    en_word_notes:
+      - word: signal
+        note: 转向灯
+      - word: turning
+        note: 转弯
+    task: 做一做打开转向灯的动作。
+    image_path: cards/day085/image.jpg
+
+  - day: 86
+    stage: 拓展
+    theme: 日产Fairlady Z
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆橙色日产 Fairlady Z 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 橙色Z跑车真漂亮。
+    cn_pinyin_marks:
+      - word: 橙色
+        pinyin: cheng2 se4
+      - word: 漂亮
+        pinyin: piao4 liang4
+    en_sentence: The orange Z looks pretty.
+    en_word_notes:
+      - word: orange
+        note: 橙色的
+      - word: pretty
+        note: 漂亮的
+    task: 找一找车头的灯。
+    image_path: cards/day086/image.jpg
+
+  - day: 87
+    stage: 拓展
+    theme: 双层巴士
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆红色双层巴士在城市道路上行驶，儿童插画，吉卜力风格，主体明确，有一定参考背景，街道和楼房环境清楚，儿童友好，无文字
+    cn_sentence: 双层巴士有上下两层。
+    cn_pinyin_marks:
+      - word: 双层巴士
+        pinyin: shuang1 ceng2 ba1 shi4
+      - word: 两层
+        pinyin: liang3 ceng2
+    en_sentence: The bus has two levels.
+    en_word_notes:
+      - word: bus
+        note: 巴士
+      - word: levels
+        note: 层
+    task: 数一数车身有几层窗。
+    image_path: cards/day087/image.jpg
+
+  - day: 88
+    stage: 拓展
+    theme: 车顶警灯
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆警车车顶警灯特写，儿童插画，吉卜力风格，主体明确，有一定参考背景，车顶和天空环境简洁可见，儿童友好，无文字
+    cn_sentence: 车顶警灯一闪一闪。
+    cn_pinyin_marks:
+      - word: 警灯
+        pinyin: jing3 deng1
+      - word: 一闪一闪
+        pinyin: yi2 shan3 yi2 shan3
+    en_sentence: The police light is flashing.
+    en_word_notes:
+      - word: police light
+        note: 警灯
+      - word: flashing
+        note: 闪动
+    task: 用手比一比灯在闪。
+    image_path: cards/day088/image.jpg
+
+  - day: 89
+    stage: 拓展
+    theme: 雪地胎
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车装着厚厚的雪地胎停在雪地边，儿童插画，吉卜力风格，主体明确，有一定参考背景，雪地和车轮环境清楚，儿童友好，无文字
+    cn_sentence: 雪地胎的花纹很深。
+    cn_pinyin_marks:
+      - word: 雪地胎
+        pinyin: xue3 di4 tai1
+      - word: 花纹
+        pinyin: hua1 wen2
+    en_sentence: The snow tire has deep lines.
+    en_word_notes:
+      - word: snow tire
+        note: 雪地胎
+      - word: deep
+        note: 很深的
+    task: 看一看轮胎上的花纹。
+    image_path: cards/day089/image.jpg
+
+  - day: 90
+    stage: 拓展
+    theme: 丰田世纪
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黑色丰田世纪轿车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黑色世纪车真稳重。
+    cn_pinyin_marks:
+      - word: 世纪车
+        pinyin: shi4 ji4 che1
+      - word: 稳重
+        pinyin: wen3 zhong4
+    en_sentence: The Century looks calm.
+    en_word_notes:
+      - word: Century
+        note: 世纪
+      - word: calm
+        note: 稳重的
+    task: 看一看这辆车长不长。
+    image_path: cards/day090/image.jpg
+
+  - day: 91
+    stage: 拓展
+    theme: 停车线
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车停在线内，地面有清楚的停车线，儿童插画，吉卜力风格，主体明确，有一定参考背景，停车场环境清楚，儿童友好，无文字
+    cn_sentence: 小汽车停在线里面。
+    cn_pinyin_marks:
+      - word: 停车线
+        pinyin: ting2 che1 xian4
+      - word: 里面
+        pinyin: li3 mian4
+    en_sentence: The car is inside the line.
+    en_word_notes:
+      - word: inside
+        note: 在线里
+      - word: line
+        note: 线
+    task: 看一看车是不是停在线里。
+    image_path: cards/day091/image.jpg
+
+  - day: 92
+    stage: 拓展
+    theme: 阿斯顿马丁DB5
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆银色阿斯顿马丁 DB5 经典轿跑，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 银色DB5车真优雅。
+    cn_pinyin_marks:
+      - word: 银色
+        pinyin: yin2 se4
+      - word: 优雅
+        pinyin: you1 ya3
+    en_sentence: The silver DB5 looks elegant.
+    en_word_notes:
+      - word: silver
+        note: 银色的
+      - word: elegant
+        note: 优雅的
+    task: 看一看这辆车圆圆的灯。
+    image_path: cards/day092/image.jpg
+
+  - day: 93
+    stage: 拓展
+    theme: 减速带
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车慢慢开过减速带，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，道路环境清楚，儿童友好，无文字
+    cn_sentence: 过减速带要慢一点。
+    cn_pinyin_marks:
+      - word: 减速带
+        pinyin: jian3 su4 dai4
+      - word: 慢一点
+        pinyin: man4 yi4 dian3
+    en_sentence: Go slow over the bumps.
+    en_word_notes:
+      - word: slow
+        note: 慢慢地
+      - word: bumps
+        note: 减速带
+    task: 说一说为什么要慢一点。
+    image_path: cards/day093/image.jpg
+
+  - day: 94
+    stage: 拓展
+    theme: 劳斯莱斯幻影
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆黑色劳斯莱斯幻影轿车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 黑色幻影车真华丽。
+    cn_pinyin_marks:
+      - word: 幻影车
+        pinyin: huan4 ying3 che1
+      - word: 华丽
+        pinyin: hua2 li4
+    en_sentence: The Phantom looks grand.
+    en_word_notes:
+      - word: Phantom
+        note: 幻影
+      - word: grand
+        note: 华丽的
+    task: 看一看这辆车亮不亮。
+    image_path: cards/day094/image.jpg
+
+  - day: 95
+    stage: 拓展
+    theme: 绿箭头灯
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 路口亮起绿箭头灯，一辆小汽车准备转弯，儿童启蒙插画，吉卜力风格，动作清晰，主体明确，有一定参考背景，路口环境清楚，儿童友好，无文字
+    cn_sentence: 看到绿箭头可以转弯。
+    cn_pinyin_marks:
+      - word: 绿箭头
+        pinyin: lv4 jian4 tou2
+      - word: 转弯
+        pinyin: zhuan3 wan1
+    en_sentence: Turn when the green arrow lights up.
+    en_word_notes:
+      - word: green arrow
+        note: 绿箭头
+      - word: turn
+        note: 转弯
+    task: 指一指图里的箭头。
+    image_path: cards/day095/image.jpg
+
+  - day: 96
+    stage: 拓展
+    theme: 迈凯伦F1
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆橙色迈凯伦 F1 超跑，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 橙色F1车真特别。
+    cn_pinyin_marks:
+      - word: 橙色
+        pinyin: cheng2 se4
+      - word: 特别
+        pinyin: te4 bie2
+    en_sentence: The orange F1 looks special.
+    en_word_notes:
+      - word: orange
+        note: 橙色的
+      - word: special
+        note: 特别的
+    task: 找一找车身中间的位置。
+    image_path: cards/day096/image.jpg
+
+  - day: 97
+    stage: 拓展
+    theme: 雾灯
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车前面的雾灯特写，前方有淡淡雾气，儿童插画，吉卜力风格，主体明确，有一定参考背景，道路环境简洁可见，儿童友好，无文字
+    cn_sentence: 雾灯在雾天照亮前面。
+    cn_pinyin_marks:
+      - word: 雾灯
+        pinyin: wu4 deng1
+      - word: 雾天
+        pinyin: wu4 tian1
+    en_sentence: The fog light shines ahead.
+    en_word_notes:
+      - word: fog light
+        note: 雾灯
+      - word: ahead
+        note: 前面
+    task: 看一看图里的雾气。
+    image_path: cards/day097/image.jpg
+
+  - day: 98
+    stage: 拓展
+    theme: 柯尼塞格Jesko
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆白色柯尼塞格 Jesko 超跑，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 白色Jesko车真像风。
+    cn_pinyin_marks:
+      - word: 白色
+        pinyin: bai2 se4
+      - word: 像风
+        pinyin: xiang4 feng1
+    en_sentence: The white Jesko looks fast.
+    en_word_notes:
+      - word: white
+        note: 白色的
+      - word: fast
+        note: 很快
+    task: 找一找这辆车低低的车头。
+    image_path: cards/day098/image.jpg
+
+  - day: 99
+    stage: 拓展
+    theme: 夜里开车
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 一辆小汽车在夜里亮着车灯前行，儿童插画，吉卜力风格，主体明确，有一定参考背景，夜色和道路环境清楚，儿童友好，无文字
+    cn_sentence: 夜里开车要开车灯。
+    cn_pinyin_marks:
+      - word: 夜里
+        pinyin: ye4 li3
+      - word: 车灯
+        pinyin: che1 deng1
+    en_sentence: Turn on the lights at night.
+    en_word_notes:
+      - word: lights
+        note: 车灯
+      - word: night
+        note: 夜里
+    task: 说一说夜里为什么要开灯。
+    image_path: cards/day099/image.jpg
+
+  - day: 100
+    stage: 拓展
+    theme: 终点小车展
+    theme_type: knowledge
+    image_style: 吉卜力风格，有一定参考背景
+    image_prompt: 很多不同的小汽车整齐停在草地车展上，儿童插画，吉卜力风格，主体明确，有一定参考背景，草地和展区环境清楚，儿童友好，无文字
+    cn_sentence: 很多小汽车一起开会啦。
+    cn_pinyin_marks:
+      - word: 很多
+        pinyin: hen3 duo1
+      - word: 一起
+        pinyin: yi4 qi3
+    en_sentence: Many cars are together here.
+    en_word_notes:
+      - word: many
+        note: 很多
+      - word: together
+        note: 在一起
+    task: 找一找你最喜欢的一辆车。
+    image_path: cards/day100/image.jpg
