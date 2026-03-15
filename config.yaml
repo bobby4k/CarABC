@@ -1,0 +1,61 @@
+# 字库阶段配置
+stages:
+  - name: 启蒙
+    days: [1, 40]
+    hanzi_files:
+      - hanzi/qimeng.txt
+    extra_chars: []
+
+  - name: 基础
+    days: [41, 70]
+    hanzi_files:
+      - hanzi/qimeng.txt
+      - hanzi/jichu.txt
+    extra_chars: []
+
+  - name: 拓展
+    days: [71, 100]
+    hanzi_files:
+      - hanzi/qimeng.txt
+      - hanzi/jichu.txt
+      - hanzi/tuozhan.txt
+    extra_chars: []
+
+# 图片模型配置
+image_model:
+  provider: alibaba
+  model_name: qwen-image-2
+  api_key_env: DASHSCOPE_API_KEY
+  base_url: https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis
+  size: 512*512
+  n: 1
+  timeout_seconds: 60
+
+# 业务规则配置
+rules:
+  total_days: 100
+  allow_brand_only_for_brand_topics: true
+  require_unique_themes: true
+  brand_names:
+    - 多美卡
+    - 拓易
+    - Mini GT
+    - 风火轮
+
+# 输入输出路径
+paths:
+  themes_file: themes.txt
+  image_dir: cards
+  output_dir: output
+  log_file: output/generated_log.json
+  pdf_file: output/car_learning.pdf
+  font_path: fonts/simsun.ttf
+
+# PDF 排版配置
+pdf:
+  page_size: A4
+  cards_per_page: 2
+  card_size: A5
+  allow_missing_image: true
+  use_placeholder_when_missing: false
+  placeholder_image: ""
