@@ -1,0 +1,208 @@
+days:
+  - day: 1
+    stage: 启蒙
+    theme: AE86
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆丰田 AE86 跑车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 白色AE86停在路边。
+    cn_pinyin_marks:
+      - word: 白色
+        pinyin: bai2 se4
+      - word: 路边
+        pinyin: lu4 bian1
+    en_sentence: The white AE86 is by the road.
+    en_word_notes:
+      - word: white
+        note: 白色的
+      - word: road
+        note: 路边
+    task: 说一说这辆车是什么颜色。
+    image_path: cards/day001/image.jpg
+
+  - day: 2
+    stage: 启蒙
+    theme: 车轮
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一辆小汽车的大车轮特写，儿童启蒙插画，简约卡通风格，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 车轮圆圆的。
+    cn_pinyin_marks:
+      - word: 车轮
+        pinyin: che1 lun2
+      - word: 圆圆
+        pinyin: yuan2 yuan2
+    en_sentence: The wheel is round.
+    en_word_notes:
+      - word: wheel
+        note: 车轮
+      - word: round
+        note: 圆的
+    task: 用手比一比圆圆的车轮。
+    image_path: cards/day002/image.jpg
+
+  - day: 3
+    stage: 启蒙
+    theme: 红绿灯
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 路口的红绿灯和一辆正在等待的小汽车，儿童启蒙插画，简约卡通风格，动作清晰，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 红灯亮了，车在等。
+    cn_pinyin_marks:
+      - word: 红灯
+        pinyin: hong2 deng1
+      - word: 等
+        pinyin: deng3
+    en_sentence: The car waits at the red light.
+    en_word_notes:
+      - word: waits
+        note: 等待
+      - word: red light
+        note: 红灯
+    task: 说一说红灯亮了要做什么。
+    image_path: cards/day003/image.jpg
+
+  - day: 4
+    stage: 启蒙
+    theme: 挖掘机
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一台黄色挖掘机在工地上挖土，儿童启蒙插画，简约卡通风格，动作清晰，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 挖掘机在挖土。
+    cn_pinyin_marks:
+      - word: 挖掘机
+        pinyin: wa1 jue2 ji1
+      - word: 挖土
+        pinyin: wa1 tu3
+    en_sentence: The excavator digs the dirt.
+    en_word_notes:
+      - word: excavator
+        note: 挖掘机
+      - word: digs
+        note: 挖
+    task: 用手做一做挖土的动作。
+    image_path: cards/day004/image.jpg
+
+  - day: 5
+    stage: 启蒙
+    theme: 小汽车
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一辆红色小汽车在路上开来，儿童启蒙插画，简约卡通风格，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 小汽车开来了。
+    cn_pinyin_marks:
+      - word: 小汽车
+        pinyin: xiao3 qi4 che1
+    en_sentence: The car is coming.
+    en_word_notes:
+      - word: car
+        note: 小汽车
+      - word: coming
+        note: 开过来
+    task: 找一找图里的车轮。
+    image_path: cards/day005/image.jpg
+
+  - day: 6
+    stage: 基础
+    theme: 公交车
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一辆黄色公交车停在站台边，儿童插画，简约卡通风格，主体明确，背景简洁，城市道路元素少，儿童友好，无文字
+    cn_sentence: 公交车停在站台边。
+    cn_pinyin_marks:
+      - word: 公交车
+        pinyin: gong1 jiao1 che1
+      - word: 站台
+        pinyin: zhan4 tai2
+    en_sentence: The bus stops by the station.
+    en_word_notes:
+      - word: bus
+        note: 公交车
+      - word: station
+        note: 站台
+    task: 数一数图里有几个车轮。
+    image_path: cards/day006/image.jpg
+
+  - day: 7
+    stage: 基础
+    theme: 救护车
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一辆白色救护车在路上行驶，儿童插画，简约卡通风格，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 救护车开得很快。
+    cn_pinyin_marks:
+      - word: 救护车
+        pinyin: jiu4 hu4 che1
+      - word: 很快
+        pinyin: hen3 kuai4
+    en_sentence: The ambulance goes fast.
+    en_word_notes:
+      - word: ambulance
+        note: 救护车
+      - word: fast
+        note: 很快
+    task: 学一学救护车的声音。
+    image_path: cards/day007/image.jpg
+
+  - day: 8
+    stage: 基础
+    theme: 丰田海狮
+    theme_type: car_model
+    image_style: 写实风，背景简洁
+    image_prompt: 一辆白色丰田海狮面包车，优先参考玩具车常见出品车型或对应实车，写实风，三分之二侧前方视角，主体明确，背景简洁，白天，儿童友好，无文字
+    cn_sentence: 白色海狮车停在路边。
+    cn_pinyin_marks:
+      - word: 海狮车
+        pinyin: hai3 shi1 che1
+      - word: 路边
+        pinyin: lu4 bian1
+    en_sentence: The white van is by the road.
+    en_word_notes:
+      - word: white
+        note: 白色的
+      - word: van
+        note: 面包车
+    task: 指一指这辆车的车窗。
+    image_path: cards/day008/image.jpg
+
+  - day: 9
+    stage: 基础
+    theme: 安全带
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一个小朋友坐在汽车座位上系好安全带，儿童启蒙插画，简约卡通风格，动作清晰，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 坐车要系安全带。
+    cn_pinyin_marks:
+      - word: 安全带
+        pinyin: an1 quan2 dai4
+      - word: 坐车
+        pinyin: zuo4 che1
+    en_sentence: Wear a seat belt in the car.
+    en_word_notes:
+      - word: seat belt
+        note: 安全带
+      - word: wear
+        note: 系上
+    task: 做一做系安全带的动作。
+    image_path: cards/day009/image.jpg
+
+  - day: 10
+    stage: 基础
+    theme: 压路机
+    theme_type: knowledge
+    image_style: 简约卡通风格，背景简洁
+    image_prompt: 一台大压路机在平整道路，儿童插画，简约卡通风格，动作清晰，主体明确，背景简洁，儿童友好，无文字
+    cn_sentence: 压路机把路压平。
+    cn_pinyin_marks:
+      - word: 压路机
+        pinyin: ya1 lu4 ji1
+      - word: 压平
+        pinyin: ya1 ping2
+    en_sentence: The road roller makes the road flat.
+    en_word_notes:
+      - word: road roller
+        note: 压路机
+      - word: flat
+        note: 平的
+    task: 看一看压路机的大轮子。
+    image_path: cards/day010/image.jpg

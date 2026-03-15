@@ -1,13 +1,13 @@
 # 字库阶段配置
 stages:
   - name: 启蒙
-    days: [1, 40]
+    days: [1, 5]
     hanzi_files:
       - hanzi/qimeng.txt
     extra_chars: []
 
   - name: 基础
-    days: [41, 70]
+    days: [6, 70]
     hanzi_files:
       - hanzi/qimeng.txt
       - hanzi/jichu.txt
@@ -44,12 +44,12 @@ rules:
 
 # 输入输出路径
 paths:
-  themes_file: themes.txt
+  themes_file: output/themes.yaml
   image_dir: cards
   output_dir: output
-  log_file: output/generated_log.json
+  log_file: output/generated_log.log
   pdf_file: output/car_learning.pdf
-  font_path: fonts/simsun.ttf
+  font_path: fonts/LXGWNeoXiHei.ttf
 
 # PDF 排版配置
 pdf:

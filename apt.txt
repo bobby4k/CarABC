@@ -1,0 +1,23 @@
+# Python 虚拟环境
+python3-venv
+python3-dev
+
+# 常用构建工具
+build-essential
+pkg-config
+
+# Pillow / 图片处理常见依赖
+libjpeg-dev
+zlib1g-dev
+libfreetype6-dev
+libopenjp2-7-dev
+libtiff-dev
+libwebp-dev
+
+# ReportLab / 字体渲染常见依赖
+liblcms2-dev
+libffi-dev
+
+# HTTPS 下载与证书
+ca-certificates
+curl
